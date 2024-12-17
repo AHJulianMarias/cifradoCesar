@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/inpPalabra"
+                android:layout_width="339dp"
+                android:layout_height="67dp"
+                android:layout_marginTop="52dp"
+                android:ems="10"
+                android:hint="Palabra a cifrar"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/inpDesplazamiento"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:hint="Desplazamiento"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="@+id/inpPalabra"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/inpPalabra"
+                app:layout_constraintTop_toBottomOf="@+id/inpPalabra" />
+
+            <TextView
+                android:id="@+id/outPalabra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/btnResultado"
+                app:layout_constraintHorizontal_bias="0.109"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnResultado" />
+
+            <Button
+                android:id="@+id/btnResultado"
+                android:layout_width="337dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="32dp"
+                android:text="Mostrar resultado"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/inpDesplazamiento"
+                app:layout_constraintTop_toBottomOf="@+id/inpDesplazamiento" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="159dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.714"
+                app:layout_constraintStart_toEndOf="@+id/inpDesplazamiento"
+                app:layout_constraintTop_toBottomOf="@+id/inpPalabra">
+
+                <RadioButton
+                    android:id="@+id/rbCifrado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Cifrado" />
+
+                <RadioButton
+                    android:id="@+id/rbDescifrado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Descifrado" />
+            </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
